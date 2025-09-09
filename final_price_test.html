@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Price Layout Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        
+        .test-section {
+            background: white;
+            margin: 20px 0;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        /* 完全复制模板中的样式 */
+        .priceContainer {
+            margin: 0 0 35px 0 !important;
+            padding-top: 25px !important;
+            padding-left: 25px !important;
+            width: 345px !important;
+            height: 100px !important;
+            border-top: 1px solid #ddd !important;
+            background: #f8f8f8;
+        }
+
+        .priceContainer h4 {
+            display: inline-block !important;
+            color: #333 !important;
+            font-size: 32px !important;
+            font-family: 'lato', sans-serif !important;
+            margin: 0 !important;
+            vertical-align: baseline !important;
+            line-height: 1 !important;
+            float: none !important;
+            clear: none !important;
+        }
+
+        .priceContainer h5 {
+            display: inline !important;
+            margin-left: 10px !important;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+            vertical-align: baseline !important;
+            color: #666 !important;
+            font-size: 12px !important;
+            font-family: 'lato', sans-serif !important;
+            font-weight: 400 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.5px !important;
+            line-height: 1 !important;
+            float: none !important;
+            clear: none !important;
+        }
+
+        .priceContainer sup {
+            color: #333 !important;
+            font-size: 14px !important;
+            font-family: 'lato', sans-serif !important;
+        }
+        
+        /* 测试不同的HTML结构 */
+        .test1 h4, .test1 h5 { border: 1px dashed red; }
+        .test2 h4, .test2 h5 { border: 1px dashed blue; }
+        .test3 h4, .test3 h5 { border: 1px dashed green; }
+        
+        .debug-info {
+            background: #e8f4fd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        
+        /* 响应式测试 */
+        @media (max-width: 768px) {
+            .priceContainer h4 {
+                font-size: 28px !important;
+            }
+            
+            .priceContainer h5 {
+                display: inline !important;
+                margin-left: 8px !important;
+                vertical-align: baseline !important;
+                font-size: 12px !important;
+                margin-top: 0 !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .priceContainer h4 {
+                font-size: 24px !important;
+            }
+            
+            .priceContainer sup {
+                font-size: 16px !important;
+            }
+            
+            .priceContainer h5 {
+                display: inline !important;
+                margin-left: 5px !important;
+                vertical-align: baseline !important;
+                font-size: 11px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>🔧 最终价格布局测试</h1>
+    
+    <div class="test-section">
+        <h2>测试1: 原始HTML结构（有换行）</h2>
+        <div class="debug-info">
+            HTML: &lt;h4&gt;69.99&lt;sup&gt;€&lt;/sup&gt;&lt;/h4&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h5&gt;incl. VAT&lt;/h5&gt;
+        </div>
+        <div class="priceContainer test1">
+            <h4>69.99<sup>€</sup></h4>
+            <h5>incl. VAT</h5>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>测试2: 紧密连接HTML结构（无换行）</h2>
+        <div class="debug-info">
+            HTML: &lt;h4&gt;69.99&lt;sup&gt;€&lt;/sup&gt;&lt;/h4&gt;&lt;h5&gt;incl. VAT&lt;/h5&gt;
+        </div>
+        <div class="priceContainer test2">
+            <h4>69.99<sup>€</sup></h4><h5>incl. VAT</h5>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>测试3: 单行HTML结构</h2>
+        <div class="debug-info">
+            HTML: &lt;span&gt;&lt;span style="font-size:32px"&gt;69.99€&lt;/span&gt; &lt;span style="font-size:12px"&gt;incl. VAT&lt;/span&gt;&lt;/span&gt;
+        </div>
+        <div class="priceContainer test3">
+            <span><span style="font-size:32px; color:#333; font-family:'lato',sans-serif;">69.99<sup style="font-size:14px;">€</sup></span> <span style="font-size:12px; color:#666; font-family:'lato',sans-serif; text-transform:uppercase; letter-spacing:0.5px;">incl. VAT</span></span>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>🎯 期望结果</h2>
+        <div class="debug-info">
+            所有测试都应该显示: <strong>69.99€ incl. VAT</strong> 在同一行<br>
+            如果测试2或测试3成功，说明问题在HTML结构中的空白字符
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>📱 响应式测试说明</h2>
+        <div class="debug-info">
+            请调整浏览器窗口大小测试：<br>
+            • 桌面端 (&gt;768px): 正常大小<br>
+            • 平板端 (≤768px): 稍小字体<br>
+            • 手机端 (≤480px): 最小字体<br>
+            <strong>所有尺寸都应该保持在同一行！</strong>
+        </div>
+    </div>
+</body>
+</html>

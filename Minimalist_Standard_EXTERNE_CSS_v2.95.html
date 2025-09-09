@@ -1,5 +1,5 @@
 
-<!-- 价格容器完全居中和所有优化样式 -->
+<!-- 价格容器优化样式 -->
 <style>
 /* 价格容器左对齐 */
 .priceContainer {
@@ -9,32 +9,6 @@
     width: 345px !important;
     height: 100px !important;
     border-top: 1px solid #ddd !important;
-}
-
-.priceContainer h4 {
-    display: inline-block !important;
-    color: #333 !important;
-    font-size: 32px !important;
-    font-family: 'lato', sans-serif !important;
-    margin: 0 !important;
-}
-
-.priceContainer h5 {
-    display: inline !important;
-    margin-left: 10px !important;
-    vertical-align: baseline !important;
-    color: #666 !important;
-    font-size: 12px !important;
-    font-family: 'lato', sans-serif !important;
-    font-weight: 400 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.5px !important;
-}
-
-.priceContainer sup {
-    color: #333 !important;
-    font-size: 14px !important;
-    font-family: 'lato', sans-serif !important;
 }
 
 /* 确保价格容器在其父容器中居中 */
@@ -106,9 +80,19 @@
         font-size: 28px !important;
     }
     
-    .priceContainer h5 {
+    div.priceContainer h5,
+    .priceContainer h5,
+    h5 {
+        display: inline !important;
+        margin-left: 8px !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding: 0 !important;
+        vertical-align: baseline !important;
         font-size: 12px !important;
-        margin-top: 6px !important;
+        line-height: 1 !important;
+        float: none !important;
+        position: static !important;
     }
     
     .navigation ul li {
@@ -130,10 +114,18 @@
         height: auto !important;
     }
     
-    .priceContainer h5 {
-        display: block !important;
-        margin-left: 0 !important;
-        margin-top: 8px !important;
+    div.priceContainer h5,
+    .priceContainer h5,
+    h5 {
+        display: inline !important;
+        margin-left: 6px !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding: 0 !important;
+        vertical-align: baseline !important;
+        line-height: 1 !important;
+        float: none !important;
+        position: static !important;
     }
 }
 
@@ -152,6 +144,21 @@
         font-size: 16px !important;
     }
     
+    div.priceContainer h5,
+    .priceContainer h5,
+    h5 {
+        display: inline !important;
+        margin-left: 5px !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding: 0 !important;
+        vertical-align: baseline !important;
+        font-size: 11px !important;
+        line-height: 1 !important;
+        float: none !important;
+        position: static !important;
+    }
+    
     .navigation ul li {
         font-size: 10px !important;
         padding: 4px 6px !important;
@@ -163,7 +170,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <!-- INSERT THE LINK TO YOUR EXTERNAL CSS BELOW -->
-<link href="https://trivesa.github.io/ebay-fonts-cdn/minimalist_style.min.css" rel="stylesheet" type="text/css">
+<link href="minimalist_style.css" rel="stylesheet" type="text/css">
 <!--------------------------------------------------->
 <!-- The HTML part of Minimalist starts here --->
 <!--------------------------------------------------->
@@ -313,9 +320,7 @@
 		</div>
 		<!-- .priceContainer: Price information -->
 		<div class="priceContainer">
-			<h4>69.99<sup>€</sup></h4>
-			<h5>incl. VAT</h5>
-
+			<h4>69.99<sup>€</sup></h4><h5>incl. VAT</h5>
 		</div>
 				<!-- .feedbackContainer: Selected account reviews -->
 		<div class="feedbackContainer">

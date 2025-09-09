@@ -216,14 +216,18 @@ Version: 2.95
 }
 
 .priceContainer h5 {
-	position: relative;
-	top: 15px;
-	left: -25px;
+	position: static;
+	top: 0;
+	left: 0;
 	display: inline;
-	color: #333;
+	margin-left: 10px;
+	vertical-align: baseline;
+	color: #666;
 	font-weight: 400;
 	font-size: 12px;
 	font-family: 'lato', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
 }
 
 .priceContainer sup {
