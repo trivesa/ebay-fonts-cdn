@@ -1,0 +1,676 @@
+
+<style>
+/* 价格容器完全居中 */
+.priceContainer {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: auto !important;
+    max-width: fit-content !important;
+    padding: 20px 25px !important;
+    background-color: #f5f5f5 !important;
+    border-radius: 10px !important;
+    margin: 20px auto !important;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.12) !important;
+    text-align: center !important;
+    min-height: 80px !important;
+}
+
+.priceContainer h4 {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 32px !important;
+    font-weight: bold !important;
+    color: #333 !important;
+    line-height: 1.1 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.priceContainer h5 {
+    margin: 8px 0 0 0 !important;
+    padding: 0 !important;
+    font-size: 13px !important;
+    color: #666 !important;
+    font-weight: normal !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+.priceContainer sup {
+    font-size: 20px !important;
+    vertical-align: super !important;
+    margin-left: 2px !important;
+}
+
+/* 确保价格容器在其父容器中居中 */
+.shortDescription {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .priceContainer {
+        padding: 18px 22px !important;
+        margin: 15px auto !important;
+        min-height: 70px !important;
+    }
+    
+    .priceContainer h4 {
+        font-size: 28px !important;
+    }
+    
+    .priceContainer h5 {
+        font-size: 12px !important;
+        margin-top: 6px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .priceContainer {
+        padding: 15px 20px !important;
+        margin: 12px auto !important;
+        min-height: 60px !important;
+    }
+    
+    .priceContainer h4 {
+        font-size: 24px !important;
+    }
+    
+    .priceContainer sup {
+        font-size: 16px !important;
+    }
+}
+
+        
+        /* 7分类导航优化 */
+        .navigation {
+            display: flex !important;
+            flex-wrap: nowrap !important;
+            justify-content: center !important;
+            align-items: center !important;
+            white-space: nowrap !important;
+            overflow-x: auto !important;
+            padding: 10px 5px !important;
+        }
+        
+        .navigation a {
+            font-size: 11px !important;
+            padding: 8px 6px !important;
+            margin: 0 2px !important;
+            white-space: nowrap !important;
+            text-decoration: none !important;
+            color: #333 !important;
+            border-radius: 4px !important;
+            transition: all 0.2s ease !important;
+        }
+        
+        .navigation a:hover {
+            background-color: #f8f9fa !important;
+            color: #007bff !important;
+        }
+        
+        /* 响应式优化 */
+        @media (max-width: 768px) {
+            .navigation {
+                font-size: 10px !important;
+                padding: 8px 3px !important;
+            }
+            
+            .navigation a {
+                font-size: 9px !important;
+                padding: 6px 4px !important;
+                margin: 0 1px !important;
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            .navigation a {
+                font-size: 12px !important;
+                padding: 10px 8px !important;
+                margin: 0 3px !important;
+            }
+        }
+        
+        /* 确保容器不换行 */
+        .navigationContainer {
+            display: flex !important;
+            justify-content: center !important;
+            width: 100% !important;
+            overflow: hidden !important;
+        }
+        </style>
+
+
+<!Doctype html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<!-- INSERT THE LINK TO YOUR EXTERNAL CSS BELOW -->
+<link href="https://trivesa.github.io/ebay-fonts-cdn/minimalist_style.min.css" rel="stylesheet" type="text/css">
+<!--------------------------------------------------->
+<!-- The HTML part of Minimalist starts here --->
+<!--------------------------------------------------->
+<!-- WARNING: After editing, please remove all text indentations if necessary, as this may cause display errors on eBay! -->
+<!-- #wrapper: wraps the complete template -->
+<div id="wrapper">
+	<!-- .header: Logo and top-arranged shop features -->
+	<div class="header">
+		<!-- Logo image source --><img src="https://trivesa.github.io/ebay-fonts-cdn/logo.png">
+		<div class="navigation">
+			<!-- .navList: Shop Categories -->
+			<ul class="navList">
+				<li> <a href="" target="_blank">Women's Shoes</a> </li>
+				<li> <a href="" target="_blank">Men's Shoes</a> </li>
+				<li> <a href="" target="_blank">Women's Bags</a> </li>
+				<li> <a href="" target="_blank">Women's Accessories</a> </li>
+				<li> <a href="" target="_blank">Men's Bags and Accessories</a> </li>
+				<li> <a href="" target="_blank">Women's Clothing</a> </li>
+				<li> <a href="" target="_blank">Other Categories</a> </li>
+			</ul>
+		</div>
+	</div>
+	<!-- .header End -->
+	<!-- Start of gallery. If you want to manually insert images into the code, this must be done in two places per image. Once within the <img> tag in the <a> with class .bigPic. And a second time in the corresponding <img> tag in the <a> link with class .galleryThumb -->
+	<div class="gallery">
+		<!-- Image placeholders will be replaced with actual product images -->
+		<label for="big-pic-1" class="galleryThumb control-item controls"> <img src="" /> </label>
+		<input checked type="radio" class="hidden-pic-input" id="big-pic-1" name="gallery-radio-buttons" />
+		<!-- Image placeholders will be replaced with actual product images -->
+		<label for="big-pic-2" class="galleryThumb control-item controls"> <img src="" /> </label>
+		<input type="radio" class="hidden-pic-input" id="big-pic-2" name="gallery-radio-buttons" />
+		<!-- Image placeholders will be replaced with actual product images -->
+		<label for="big-pic-3" class="galleryThumb control-item controls"> <img src="" /> </label>
+		<input type="radio" class="hidden-pic-input" id="big-pic-3" name="gallery-radio-buttons" />
+		<!-- Image placeholders will be replaced with actual product images -->
+		<label for="big-pic-4" class="galleryThumb control-item controls"> <img src="" /> </label>
+		<input type="radio" class="hidden-pic-input" id="big-pic-4" name="gallery-radio-buttons" />
+		<!-- Image placeholders will be replaced with actual product images -->
+		<label for="big-pic-5" class="galleryThumb control-item controls"> <img src="" /> </label>
+		<input type="radio" class="hidden-pic-input" id="big-pic-5" name="gallery-radio-buttons" />
+		<!-- Image placeholders will be replaced with actual product images -->
+		<label for="big-pic-6" class="galleryThumb control-item controls"> <img src="" /> </label>
+		<input type="radio" class="hidden-pic-input" id="big-pic-6" name="gallery-radio-buttons" />
+		<!-- Image placeholders will be replaced with actual product images -->
+		<label for="big-pic-7" class="galleryThumb control-item controls"> <img src="" /> </label>
+		<input type="radio" class="hidden-pic-input" id="big-pic-7" name="gallery-radio-buttons" />
+		<!-- Image placeholders will be replaced with actual product images -->
+		<label for="big-pic-8" class="galleryThumb control-item controls"> <img src="" /> </label>
+		<input type="radio" class="hidden-pic-input" id="big-pic-8" name="gallery-radio-buttons" />
+		<!-- Image placeholders will be replaced with actual product images -->
+		<label for="big-pic-9" class="galleryThumb control-item controls"> <img src="" /> </label>
+		<input type="radio" class="hidden-pic-input" id="big-pic-9" name="gallery-radio-buttons" />
+		<!-- Image placeholders will be replaced with actual product images -->
+		<label for="big-pic-10" class="galleryThumb control-item controls"> <img src="" /> </label>
+		<input type="radio" class="hidden-pic-input" id="big-pic-10" name="gallery-radio-buttons" />
+		<!-- Image placeholders will be replaced with actual product images -->
+		<label for="big-pic-11" class="galleryThumb control-item controls"> <img src="" /> </label>
+		<input type="radio" class="hidden-pic-input" id="big-pic-11" name="gallery-radio-buttons" />
+		<!-- Image placeholders will be replaced with actual product images -->
+		<label for="big-pic-12" class="galleryThumb control-item controls"> <img src="" /> </label>
+		<input type="radio" class="hidden-pic-input" id="big-pic-12" name="gallery-radio-buttons" />
+		<!-- Image placeholders will be replaced with actual product images -->
+		<a class="bigPic" href="#zoompic-1"> <img src="" /> </a>
+		<!-- Image placeholders will be replaced with actual product images -->
+		<a class="bigPic" href="#zoompic-2"> <img src="" /> </a>
+		<!-- Image placeholders will be replaced with actual product images -->
+		<a class="bigPic" href="#zoompic-3"> <img src="" /> </a>
+		<!-- Image placeholders will be replaced with actual product images -->
+		<a class="bigPic" href="#zoompic-4"> <img src="" /> </a>
+		<!-- Image placeholders will be replaced with actual product images -->
+		<a class="bigPic" href="#zoompic-5"> <img src="" /> </a>
+		<!-- Image placeholders will be replaced with actual product images -->
+		<a class="bigPic" href="#zoompic-6"> <img src="" /> </a>
+		<!-- Image placeholders will be replaced with actual product images -->
+		<a class="bigPic" href="#zoompic-7"> <img src="" /> </a>
+		<!-- Image placeholders will be replaced with actual product images -->
+		<a class="bigPic" href="#zoompic-8"> <img src="" /> </a>
+		<!-- Image placeholders will be replaced with actual product images -->
+		<a class="bigPic" href="#zoompic-9"> <img src="" /> </a>
+		<!-- Image placeholders will be replaced with actual product images -->
+		<a class="bigPic" href="#zoompic-10"> <img src="" /> </a>
+		<!-- Image placeholders will be replaced with actual product images -->
+		<a class="bigPic" href="#zoompic-11"> <img src="" /> </a>
+		<!-- Image placeholders will be replaced with actual product images -->
+		<a class="bigPic" href="#zoompic-12"> <img src="" /> </a>
+		<!-- Zoom Image 1 -->
+		<div id="zoompic-1" class="overlay">
+			<div class="zoom-bigPic"><a href="#item-1" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="" style="display: inline;"><a href="#item-1" class="close-text">Close zoom view</a></div>
+		</div>
+		<!-- Zoom Image 2 -->
+		<div id="zoompic-2" class="overlay">
+			<div class="zoom-bigPic"><a href="#item-2" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="" style="display: inline;"><a href="#item-2" class="close-text">Close zoom view</a></div>
+		</div>
+		<!-- Zoom Image 3 -->
+		<div id="zoompic-3" class="overlay">
+			<div class="zoom-bigPic"><a href="#item-3" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="" style="display: inline;"><a href="#item-3" class="close-text">Close zoom view</a></div>
+		</div>
+		<!-- Zoombild 4 -->
+		<div id="zoompic-4" class="overlay">
+			<div class="zoom-bigPic"><a href="#item-4" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="" style="display: inline;"><a href="#item-4" class="close-text">Close zoom view</a></div>
+		</div>
+		<!-- Zoombild 5 -->
+		<div id="zoompic-5" class="overlay">
+			<div class="zoom-bigPic"><a href="#item-5" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="" style="display: inline;"><a href="#item-5" class="close-text">Close zoom view</a></div>
+		</div>
+		<!-- Zoombild 6 -->
+		<div id="zoompic-6" class="overlay">
+			<div class="zoom-bigPic"><a href="#item-6" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="" style="display: inline;"><a href="#item-6" class="close-text">Close zoom view</a></div>
+		</div>
+		<!-- Zoombild 7 -->
+		<div id="zoompic-7" class="overlay">
+			<div class="zoom-bigPic"><a href="#item-7" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="" style="display: inline;"><a href="#item-7" class="close-text">Close zoom view</a></div>
+		</div>
+		<!-- Zoombild 8 -->
+		<div id="zoompic-8" class="overlay">
+			<div class="zoom-bigPic"><a href="#item-8" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="" style="display: inline;"><a href="#item-8" class="close-text">Close zoom view</a></div>
+		</div>
+		<!-- Zoombild 9 -->
+		<div id="zoompic-9" class="overlay">
+			<div class="zoom-bigPic"><a href="#item-9" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="" style="display: inline;"><a href="#item-9" class="close-text">Close zoom view</a></div>
+		</div>
+		<!-- Zoombild 10 -->
+		<div id="zoompic-10" class="overlay">
+			<div class="zoom-bigPic"><a href="#item-10" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="" style="display: inline;"><a href="#item-10" class="close-text">Close zoom view</a></div>
+		</div>
+		<!-- Zoombild 11 -->
+		<div id="zoompic-11" class="overlay">
+			<div class="zoom-bigPic"><a href="#item-11" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="" style="display: inline;"><a href="#item-11" class="close-text">Close zoom view</a></div>
+		</div>
+		<!-- Zoombild 12 -->
+		<div id="zoompic-12" class="overlay">
+			<div class="zoom-bigPic"><a href="#item-12" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="" style="display: inline;"><a href="#item-12" class="close-text">Close zoom view</a></div>
+		</div>
+	</div>
+	<div class="upperBody">
+		<!-- .shortdescription: Short description. h2: Large heading (article name), h3: Subtitle, p: The actual short description text -->
+		<div class="shortdescription">
+			<h1>RENE WS04SH Women's Premium Sneakers - Comfortable Athletic Shoes</h1>
+			<h3>RENE WS04SH Women's Premium Sneakers - Comfortable Athletic Shoes</h3>
+			<p>Indulge in the elegance of the RENE WS04SH Women's Premium Sneakers - Comfortable Athletic Shoes, where ancient allure meets modern sophistication. These Crystal Embellished Spiral Strap Heels draw inspiration from the timeless beauty of Egyptian r...</p>
+		</div>
+		<div class="variationContainer">
+<h5>Available Colors:</h5>
+<ul class="varList1">
+    <li>Beige</li>
+</ul>
+<h5>Available Sizes:</h5>
+<ul class="varList2">
+    <li>Standard</li>
+    <li>Large</li>
+</ul>
+</div>
+		<!-- .priceContainer: Price information -->
+		<div class="priceContainer">
+			<h4>69.99
+<sup>€</sup>
+</h4>
+			<h5>incl. VAT</h5>
+			<!-- #askNowButton: Frage Stellen-Button. Wird dynamisch über das nachfolgende Skript befüllt. ACHTUNG: Funktioniert nicht mit Varianten-Artikeln, da eBay zuvor die Auswahl einer Variante über die eBay-Maske oberhalb der Artikelbeschreibung benötigt. -->
+		</div>
+		<!-- .feedbackContainer: Selected account reviews -->
+		<div class="feedbackContainer">
+			<h4>Selected Account Reviews</h4>
+			<div class="underline"></div>
+        <div class="feedback">
+            <p>"Excellent quality women heels,pumps from Unknown. Exactly as described and fast shipping!"<br>
+                <span>- Verified Buyer</span>
+            </p>
+        </div>
+        <div class="feedback">
+            <p>"Perfect women heels,pumps, authentic Unknown product. Highly recommended seller!"<br>
+                <span>- Customer Review</span>
+            </p>
+        </div>
+</div>
+		</div>
+	</div>
+	<!-- TAB BAR -->
+	<!-- For optimal display, please insert a "<div class='clearer'>" after an image in the "contentImgRight" or "contentImgLeft" div to cancel the float wrapping. -->
+	<div class="tabBar">
+		<input type="radio" checked name="tab" id="tab1-btn">
+		<label for="tab1-btn" class="tablinks">Description</label>
+		<input type="radio" name="tab" id="tab2-btn">
+		<label for="tab2-btn" class="tablinks">Payment</label>
+		<input type="radio" name="tab" id="tab3-btn">
+		<label for="tab3-btn" class="tablinks">Shipping</label>
+		<input type="radio" name="tab" id="tab4-btn">
+		<label for="tab4-btn" class="tablinks">About Us</label>
+		<input type="radio" name="tab" id="tab5-btn">
+		<label for="tab5-btn" class="tablinks">Contact</label>
+		<div id="tab1">
+			<div class="contentBorder">
+				<div class="animated fadeInRight">
+					<div class="tabContent">
+						<div>
+							<h2>Tab 1 - The Most Important at a Glance</h2>
+							<p>Please <b>double-click or select</b> the text you want to change and start typing.
+								<br>
+								<br>To replace images, please click on the image and select "Insert Image" in the toolbar.
+								<br>
+								<br>To link buttons and "Related" articles, <b>select text and image by double-clicking</b> (for buttons and the "Related" articles on the right) and then add the link via the <b>menu item "Insert Link" in the toolbar</b>.
+								<br>
+								<br><b><u>More information in the instructions below</u></b></p>
+							<br>
+							<br>
+							<div class="clearer"></div>
+							<div class="descriptionFeatures">
+								<h1>Features of "Minimalist"</h1>
+								<ul class="eBayFeatureList">
+									<li><i class="fa fa-check"></i><b>Responsive</b> Design (mobile &amp; eBay App)</li>
+									<li><i class="fa fa-check"></i><b>Lifetime</b> free editor for customization</li>
+									<li><i class="fa fa-check"></i><b>Zoom gallery</b> without active content</li>
+									<li><i class="fa fa-check"></i>Including <b>video and text instructions</b></li>
+									<li><i class="fa fa-check"></i>Animated <b>gallery</b> with <b>up to 12 images</b></li>
+									<li><i class="fa fa-check"></i>Suitable for <b>eBay requirements from June 2017</b></li>
+									<li><i class="fa fa-check"></i><b>Ohne Kontaktangaben &amp; bereit für September 2017</b></li>
+									<li><i class="fa fa-check"></i><b>Shipping innerhalb von 10 Minuten</b> nach Zahlung</li>
+									<li><i class="fa fa-check"></i><b>Kostenloser</b> Support (keine Designarbeiten)</li>
+									<li><i class="fa fa-check"></i>Animierte <b>Bestseller</b> (manuell)</li>
+									<li><i class="fa fa-check"></i><b>Kategorien</b> (manuell)</li>
+									<li><i class="fa fa-check"></i>Anzeige verschiedenener <b>Varianten</b></li>
+									<li><i class="fa fa-check"></i>Präsentation von <b>Bewertungen</b> (manuell)</li>
+									<li><i class="fa fa-check"></i>Kompatibel mit allen <b>gängigen Browsern</b></li>
+									<li><i class="fa fa-check"></i><b>Lebenslang</b> kostenlose Updates</li>
+								</ul>
+							</div>
+							<div class="contentImgLeft"> <img src="https://trivesa.github.io/ebay-fonts-cdn/logo.png"> </div>
+							<h2>Discover the exceptional quality of this premium product. Crafted with attention to detail and superior materials. Perfect for those who appreciate luxury and sophistication.</h2>
+							<p>Indulge in the elegance of the RENE WS04SH Women's Premium Sneakers - Comfortable Athletic Shoes, where ancient allure meets modern sophistication. These Crystal Embellished Spiral Strap Heels draw inspiration from the timeless beauty of Egyptian r...</p>
+							<div class="clearer"></div>
+							<br>
+							<br>
+							<h2>Lorem ipsum dolor</h2>
+							<p>Indulge in the elegance of the RENE WS04SH Women's Premium Sneakers - Comfortable Athletic Shoes, where ancient allure meets modern sophistication. These Crystal Embellished Spiral Strap Heels draw inspiration from the timeless beauty of Egyptian r...</p>
+							<br>
+							<br>
+							<br>
+							<br>
+							<div class="contentImgRight"> <img src="https://trivesa.github.io/ebay-fonts-cdn/logo.png"> </div>
+							<h2>Lorem ipsum dolor sit</h2>
+							<p>Indulge in the elegance of the RENE WS04SH Women's Premium Sneakers - Comfortable Athletic Shoes, where ancient allure meets modern sophistication. These Crystal Embellished Spiral Strap Heels draw inspiration from the timeless beauty of Egyptian r...</p>
+							<div class="clearer"></div>
+							<br>
+							<br>
+							<h2>Lorem ipsum dolor sit</h2>
+							<p>Indulge in the elegance of the RENE WS04SH Women's Premium Sneakers - Comfortable Athletic Shoes, where ancient allure meets modern sophistication. These Crystal Embellished Spiral Strap Heels draw inspiration from the timeless beauty of Egyptian r...</p>
+							<br>
+							<br>
+							<div class="contentImgInline"> <img src=""> </div>
+							<div class="contentImgInline"> <img src=""> </div>
+							<div class="contentImgInline"> <img src=""> </div>
+							<div class="contentImgInline"> <img src=""> </div>
+							<br>
+							<br>
+							<br>
+							<br>
+							<h2>Lorem ipsum dolor sit</h2>
+							<p>Indulge in the elegance of the RENE WS04SH Women's Premium Sneakers - Comfortable Athletic Shoes, where ancient allure meets modern sophistication. These Crystal Embellished Spiral Strap Heels draw inspiration from the timeless beauty of Egyptian r...</p>
+							<br>
+							<br>
+							<ul>
+								<li>Superior craftsmanship</li>
+								<li>Authentic design</li>
+								<li>Discover the exceptional quality of this premium product. Crafted with attention to detail and superior materials. Perfect for those who appreciate luxury and sophistication.</li>
+							</ul>
+							<br>
+							<br>
+							<p>Indulge in the elegance of the RENE WS04SH Women's Premium Sneakers - Comfortable Athletic Shoes, where ancient allure meets modern sophistication. These Crystal Embellished Spiral Strap Heels draw inspiration from the timeless beauty of Egyptian r...</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- tab 2 -->
+		<div id="tab2">
+			<div class="contentBorder">
+				<div class="animated fadeInRight">
+					<div class="tabContent">
+						<div>
+							<h2>Payment Options</h2>
+							<p>You can buy this item directly through the eBay platform. Detailed information can be found on the following eBay help pages: <b><a href="">click here</a></b>
+								<br>
+								<br><b>We accept payments by advance payment, PayPal and cash on delivery.</b></p>
+							<br>
+							<h2>Advance Payment</h2>
+							<p>Wenn Sie die Zahlungsart Vorkasse wählen, überweisen Sie den Betrag bitte nach Abschluss der Kaufabwicklung auf unser Girokonto
+								<br>
+								<br><b>Empfänger: Kontoinhaber
+								<br>
+								<br>Bankinstitut: Name_der_Bank
+								<br>IBAN: DE
+								<br>
+							SWIFT-BIC: PSSWIFTXXX</b></p>
+							<br>
+							<br><b>Als Verwendungszweck geben Sie bitte Ihren eBay-Mitgliedsnamen und die jeweilige eBay-Artikelnummer an.</b> Wir versenden das Produkt nachdem wir den Zahlungseingang Ihrer Bank Transfer feststellen können.
+							<br>
+							<br>
+							<h2>PayPal</h2>
+							<p>Bei der Bezahlung per PayPal erfolgt der Shipping der Ware, sobald wir einen Zahlungseingang feststellen können.
+								<br>
+								<br><b>Bitte beachten Sie, dass wir aufgrund der Verkäuferschutzrichtlinien von PayPal unbedingt an Ihre bei PayPal hinterlegte Lieferadresse versenden müssen.</b></p>
+							<br>
+							<h2>Cash on Delivery</h2>
+							<p>Bei der Bezahlung per Cash on Delivery erfolgt der Shipping der Ware sofort und Sie entrichten die Kaufsumme beim Empfang an den Lieferanten.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- tab 3 -->
+		<div id="tab3">
+			<div class="contentBorder">
+				<div class="animated fadeInRight">
+					<div class="tabContent">
+						<div>
+							<h2>Shipping</h2>
+							<p><b>Die Lieferzeit beträgt bei Paketen der DHL innerhalb Deutschlands 2-3 Werktage nach Zahlungseingang</b></p>
+							<br>
+							<h2>Abholung vor Ort</h2>
+							<p>Sie können Ihren Artikel selbstverständlich auch vor Ort versandkostenfrei direkt selbst in unserem Ladengeschäft abholen.
+								<br>
+								<br>Bitte beachten Sie zur Abholung Ihrer Bestellung unsere Öffnungszeiten: Mo-Fr: 9:00 - 17:00 Uhr
+								<br>
+								<br><b>Wichtig:</b> Bei der Zahlungsart Vorkasse/Bank Transfer muss die Zahlung auf unserem Bankkonto eingegangen sein, bevor wir die Ware an Sie aushändigen können.</p>
+							<br> </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- tab 4 -->
+		<div id="tab4">
+        <div class="tabcontent">
+            <div class="contentContainer">
+                <h2>About Milano Moda Maison</h2>
+                <p>Milano Moda Maison is your trusted eBay seller for authentic luxury fashion and accessories. We specialize in premium brands and guarantee the authenticity of all our products.</p>
+                <h3>Why Choose Us?</h3>
+                <ul>
+                    <li>100% Authentic products guaranteed</li>
+                    <li>Expert quality control process</li>
+                    <li>Fast and secure shipping</li>
+                    <li>Excellent eBay feedback rating</li>
+                    <li>Professional customer service</li>
+                    <li>Secure eBay transactions only</li>
+                </ul>
+                <h3>Our Commitment</h3>
+                <ul>
+                    <li>Authentic luxury items only</li>
+                    <li>Detailed product descriptions</li>
+                    <li>High-quality product photos</li>
+                    <li>Secure packaging and shipping</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+			</div>
+		</div>
+		<div id="tab5">
+        <div class="tabcontent">
+            <div class="contentContainer">
+                <h2>Contact Information</h2>
+                <p>For any questions about this item, please use eBay's messaging system:</p>
+                <h3>How to reach us</h3>
+                <ul>
+                    <li>Click "message seller" on this listing</li>
+                    <li>Use eBay Messages in your account</li>
+                    <li>We respond within 24 hours</li>
+                    <li>All communication through eBay only</li>
+                </ul>
+                <h3>Customer Service</h3>
+                <ul>
+                    <li>Fast response to all inquiries</li>
+                    <li>Professional customer support</li>
+                    <li>Detailed product information available</li>
+                    <li>Secure eBay messaging system</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+			</div>
+		</div>
+		<div id="tab6">
+			<div class="contentBorder">
+				<div class="animated fadeInRight">
+					<div class="tabContent">
+						<div>
+							<h2>Tab 6 - Das Wichtigste auf einen Blick</h2>
+							<p>Please <b>double-click or select</b> the text you want to change and start typing.
+								<br>
+								<br>To replace images, please click on the image and select "Insert Image" in the toolbar.
+								<br>
+								<br>To link buttons and "Related" articles, <b>select text and image by double-clicking</b> (for buttons and the "Related" articles on the right) and then add the link via the <b>menu item "Insert Link" in the toolbar</b>.
+								<br>
+								<br><b><u>More information in the instructions below</u></b></p>
+							<br>
+							<br>
+							<div class="clearer"></div>
+							<div class="contentImgLeft"> <img src="https://trivesa.github.io/ebay-fonts-cdn/logo.png"> </div>
+							<h2>Discover the exceptional quality of this premium product. Crafted with attention to detail and superior materials. Perfect for those who appreciate luxury and sophistication.</h2>
+							<p>Indulge in the elegance of the RENE WS04SH Women's Premium Sneakers - Comfortable Athletic Shoes, where ancient allure meets modern sophistication. These Crystal Embellished Spiral Strap Heels draw inspiration from the timeless beauty of Egyptian r...</p>
+							<div class="clearer"></div>
+							<br>
+							<br>
+							<h2>Lorem ipsum dolor</h2>
+							<p>Indulge in the elegance of the RENE WS04SH Women's Premium Sneakers - Comfortable Athletic Shoes, where ancient allure meets modern sophistication. These Crystal Embellished Spiral Strap Heels draw inspiration from the timeless beauty of Egyptian r...</p>
+							<br>
+							<br>
+							<br>
+							<br>
+							<div class="contentImgRight"> <img src="https://trivesa.github.io/ebay-fonts-cdn/logo.png"> </div>
+							<h2>Lorem ipsum dolor sit</h2>
+							<p>Indulge in the elegance of the RENE WS04SH Women's Premium Sneakers - Comfortable Athletic Shoes, where ancient allure meets modern sophistication. These Crystal Embellished Spiral Strap Heels draw inspiration from the timeless beauty of Egyptian r...</p>
+							<div class="clearer"></div>
+							<br>
+							<br>
+							<h2>Lorem ipsum dolor sit</h2>
+							<p>Indulge in the elegance of the RENE WS04SH Women's Premium Sneakers - Comfortable Athletic Shoes, where ancient allure meets modern sophistication. These Crystal Embellished Spiral Strap Heels draw inspiration from the timeless beauty of Egyptian r...</p>
+							<br>
+							<br>
+							<div class="contentImgInline"> <img src=""> </div>
+							<div class="contentImgInline"> <img src=""> </div>
+							<div class="contentImgInline"> <img src=""> </div>
+							<div class="contentImgInline"> <img src=""> </div>
+							<br>
+							<br>
+							<br>
+							<br>
+							<h2>Lorem ipsum dolor sit</h2>
+							<p>Indulge in the elegance of the RENE WS04SH Women's Premium Sneakers - Comfortable Athletic Shoes, where ancient allure meets modern sophistication. These Crystal Embellished Spiral Strap Heels draw inspiration from the timeless beauty of Egyptian r...</p>
+							<br>
+							<br>
+							<ul>
+								<li>Superior craftsmanship</li>
+								<li>Authentic design</li>
+								<li>Discover the exceptional quality of this premium product. Crafted with attention to detail and superior materials. Perfect for those who appreciate luxury and sophistication.</li>
+							</ul>
+							<br>
+							<br>
+							<p>Indulge in the elegance of the RENE WS04SH Women's Premium Sneakers - Comfortable Athletic Shoes, where ancient allure meets modern sophistication. These Crystal Embellished Spiral Strap Heels draw inspiration from the timeless beauty of Egyptian r...</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Bestseller -->
+	<div class="crossSellerContainer">
+		<div class="linethrough"></div>
+		<!-- Bestseller Überschrift-->
+		<h2>Our Bestsellers</h2>
+		<div class="clearer"></div>
+		<!-- Bestseller: Artikel 1 -->
+		<div class="crossSellerItem1 crossSellerItem">
+			<a href="" target="_blank">
+				<!-- Bestseller: Artikel 1 BILD --><img src="https://trivesa.github.io/ebay-fonts-cdn/logo.png" alt="First Placeholder">
+				<!-- Bestseller: Artikel 1 TEXT -->
+				<span class="item-title">First Placeholder</span>
+				<span class="item-price">59.99<sup>€</sup></span>
+			</a>
+		</div>
+		<!-- Bestseller: Artikel 3 -->
+		<div class="crossSellerItem2 crossSellerItem">
+			<a href="" target="_blank">
+				<!-- Bestseller: Artikel 3 BILD --><img src="https://trivesa.github.io/ebay-fonts-cdn/logo.png" alt="Second Placeholder">
+				<!-- Bestseller: Artikel 3 TEXT -->
+				<span class="item-title">Second Placeholder</span>
+				<span class="item-price">59.99<sup>€</sup></span>
+			</a>
+		</div>
+		<!-- Bestseller: Artikel 2 -->
+		<div class="crossSellerItem3 crossSellerItem">
+			<a href="" target="_blank">
+				<!-- Bestseller: Artikel 2 BILD --><img src="https://trivesa.github.io/ebay-fonts-cdn/logo.png" alt="Third Placeholder">
+				<!-- Bestseller: Artikel 2 TEXT -->
+				<span class="item-title">Third Placeholder</span>
+				<span class="item-price">59.99<sup>€</sup></span>
+			</a>
+		</div>
+	</div>
+	<!-- Footer -->
+	<div class="footerContainer">
+		<div class="footerColumn">
+			<h2>About us</h2>
+			<p><a href="#" class="ps-ebay-shop-link" target="_blank">Pixelsafari</a> ist Ihr kompetenter Anbieter für <b>Software & IT-Services</b></p>
+			<br />
+			<p>Kontaktieren Sie uns gerne jederzeit per <a href="#" class="ps-ebay-contact-link" target="_blank">Kontaktformular</a>.</p>
+		</div>
+		<div class="footerColumn">
+			<h2>Zahlung & Shipping</h2>
+			<div class="footerRow"><i class="fa fa-paypal"></i>
+				<p>PayPal</p>
+			</div>
+			<div class="footerRow"><i class="fa fa-money"></i>
+				<p>Bank Transfer</p>
+			</div>
+			<div class="footerRow"><i class="fa fa-home"></i>
+				<p>Self Collection</p>
+			</div>
+			<div class="footerRow"><i class="fa fa-truck"></i>
+				<p>Shipping: DHL & Deutsche Post</p>
+			</div>
+		</div>
+		<div class="footerColumn">
+			<h2>More Offers</h2>
+			<p>Viele weitere Angebote finden Sie in unserem <a href="#" class="ps-ebay-shop-link" target="_blank">eBay Shop</a> oder erhalten Neuheiten und Aktionen bequem mit unserem <a href="#" class="ps-ebay-newsletter-link">Newsletter</a>.</p>
+			<div id="copyright">Design &amp; Development by <a href="" target="_blank">Pixelsafari</a></div>
+		</div>
+	</div>
+</div>
+<!-- Bei Fragen einfach fragen! support(at)pixelsafari -->
+<div style="display:none" id="ps_accountinformation">
+	<div class="eBayMobileShortdescription">
+		<div vocab="" typeof="Product"><span property="description"></span></div>
+	</div> <span id="accountname"></span> <span id="shopURL"></span> <span id="currentColor">#BF392B</span><span id="ps_templateName">minimalist</span><span id="ps_templateVersion">280</span></div>
+<div class="ps-hide-mobile-logo-styles">
+</div>
+<div class="ps-hide-mobile-headernav-styles">
+</div>
+<div class="ps-hide-mobile-gallerythumbs-styles">
+</div>
+<div class="ps-hide-mobile-buttons-styles">
+</div>
+<div class="ps-hide-mobile-individualelements-styles">
+</div>

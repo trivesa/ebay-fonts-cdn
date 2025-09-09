@@ -1,0 +1,66 @@
+Lies Mich-Datei
+Für Ihre Pixelsafari Auktionsvorlage
+Beigelegte Lies-Mich Datei (.pdf)
+Für Pixelsafari Templates
+Zuletzt aktualisiert: 30.11.2018
+https://pixelsafari.net
+Schnellanleitung Vielen Dank für Ihren Kauf unserer eBay
+Auktionsvorlage!
+In dem heruntergeladenen Ordner finden Sie neben dieser LiesMich-Datei auch die
+Standard-Version Ihres Templates als .html Datei.
+Sie werden einen Quellcode vorfinden, den Sie ohne Programmierkenntnisse mit Hilfe
+unseres Template Designers auf http://pixelsafari.net/templatedesigner-v3/ bearbeiten
+können.
+Auf der Seite http://pixelsafari.net/templatedesigner-v3/ finden Sie auch im unteren Teil
+das Handbuch zu dem Editor.
+Selbstverständlich können Sie mit einem beliebigen Webeditor auch direkt die .html-
+Datei öﬀnen und dort manuell bearbeiten. Wir empfehlen hierfür den kostenfreien und sehr
+leistungsstarken Webeditor „Brackets“ von Adobe: http://brackets.io/
+Falls Sie die Vorlage über einen Webeditor statt unseren Template Designer einrichten
+möchten, finden Sie eine Liste der verfügbaren HTML-Tags hier finden: http://www.html-
+seminar.de/befehlsuebersicht.htm (Besonders relevant ab Abschnitt „Text strukturieren“).
+Bitte entfernen Sie in diesem Fall auch unbedingt sämtliche Bildquellen aus der Vorlage (s.
+Abschnitt „Datenschutzhinweis“).
+Ordner Profi-Version Der Unterordner „PROFI-Version mit externer CSS“ Ist nur für fortgeschrittene
+Benutzer geeignet!
+Hier können Sie die CSS-Datei „[Template Name]_style.css“ auf Ihren eigenen Webserver
+hochladen und in der .html-Datei darauf verlinken. Die entsprechende Verlinkung befindet
+sich am Anfang der .html-Datei (in etwa in Zeile 4) und ist entsprechend markiert.
+Bitte laden Sie nicht nur die externe CSS-Datei, sondern auch den zugehörigen Ordner
+„fonts“ in das gleiche Verzeichnis hoch, da die CSS-Datei die Schriftarten aus diesem
+importiert.
+Vorteil dieser Variante: Die CSS-Datei liegt auf Ihrem Server. Sie können somit zentral für
+alle Artikel Layout- und Design-Anpassungen vornehmen. Zudem können Sie bei
+zukünftigen Updates einfach die CSS auf Ihrem Server ersetzen anstatt Artikel einzeln zu
+überarbeiten.
+Datenschutzhinweis HINWEIS: Bitte wenden Sie sich für eine konkrete rechtliche Einschätzung zu allen
+folgenden Themen unbedingt an Ihren Anwalt, Datenschutzbeauftragten oder
+anderweitigen Ansprechpartner für Datenschutz. Pixelsafari kann und darf diesbezüglich
+keine Empfehlung aussprechen.
+Seit 25.05.2018 ist in Europa die Datenschutz-Grundverordnung (DSGVO) vollends in
+Kraft getreten. Leider existiert an vielen Stellen noch keine Klarheit, ob bestimmte
+Services unter der neuen Verordnung weiterhin benutzt werden können. Davon sind auch
+sogenannte Webfonts (Schriften und Icons von Drittanbietern) betroﬀen, die auch in
+Pixelsafari Templates zum Einsatz kommen.
+Damit Sie die Auswahl haben, wie Sie Sich aufstellen möchten, bieten wir im Rahmen der
+Version mit externer CSS die Möglichkeit die Webfonts selbst zu hosten und damit das
+Datenschutzrisiko auszuschließen. Dazu laden Sie bitte sowohl die externe CSS-Datei als
+auch den Ordner „fonts“ samt Inhalt auf Ihren Webspace hoch und verlinken diesen
+nach o.g. Vorgehen.
+Darüber hinaus befinden sich in der Auslieferungsversion des Templates Bildinhalte, die
+bezüglich der DSGVO kritisch gesehen werden könnten. Wenn Sie das Template mit
+unserem kostenlosen Template Designer bearbeiten werden diese Inhalte automatisch
+beim Abspeichern entfernt. Sollten Sie das Template auf eine andere Art und Weise
+(z.B. mit einem anderem Editor) bearbeiten, dann entfernen Sie bitte vor dem Upload zu
+eBay alle Bildlinks, die nicht auf Ihren Webspace oder auf eBay verweisen.
+Support & Copyright Erneut vielen Dank für Ihren Kauf. Wir wünschen Ihnen viel Spaß und Erfolg bei der
+modernen Neugestaltung Ihres Shops! Da wir Ihnen bewusst den kompletten Quellcode
+zur Verfügung stellen dürfen und sollen Sie diesen gerne nach Belieben modifizieren.
+Lediglich unser Wasserzeichen (Design & Development by Pixelsafari) samt Verlinkung
+müssen stets im Footer sichtbar sein (siehe hierzu unsere AGB). Da unsere Templates
+oftmals von Werbeagenturen für Ihre Kunden erworben und eingerichtet werden, bieten
+wir auch erweiterte Lizenzen ohne Wasserzeichen-Pflicht an - kontaktieren Sie uns bitte
+bei Interesse.
+Sollten Sie Fragen haben, zögern Sie bitte nicht uns unter support@pixelsafari.net
+jederzeit zu schreiben.
+
