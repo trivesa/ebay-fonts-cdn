@@ -224,8 +224,8 @@
     }
 }
 
-/* Logo和导航样式 - 只影响header中的logo */
-.header > img {
+/* Logo样式 - 只影响主Logo */
+.main-logo, .header > img.main-logo {
     display: block !important;
     margin: 0 auto 40px auto !important;
     max-width: 525px !important;
@@ -235,10 +235,13 @@
 }
 
 /* 确保其他图片不受影响 */
-.gallery img, .bigPic img, .galleryThumb img, .zoom-bigPic img {
-    max-width: none !important;
-    max-height: none !important;
+.gallery img, .bigPic img, .galleryThumb img, .zoom-bigPic img, 
+img:not(.main-logo) {
+    max-width: initial !important;
+    max-height: initial !important;
     margin: initial !important;
+    width: initial !important;
+    height: initial !important;
 }
 
 .navigation {
@@ -334,7 +337,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	<!-- .header: Logo and top-arranged shop features -->
 	<div class="header">
 		<!-- Logo image source -->
-		<img src="https://trivesa.github.io/ebay-fonts-cdn/logo.png" alt="Milano Moda Maison" style="display: block !important; margin: 0 auto 20px auto !important; max-width: 260px !important; max-height: 120px !important; visibility: visible !important;" onerror="document.getElementById('fallback-logo').style.display='block'; this.style.display='none';">
+		<img src="https://trivesa.github.io/ebay-fonts-cdn/logo.png" alt="Milano Moda Maison" class="main-logo" style="display: block !important; margin: 0 auto 20px auto !important; max-width: 525px !important; max-height: 240px !important; visibility: visible !important;" onerror="document.getElementById('fallback-logo').style.display='block'; this.style.display='none';">
 		<!-- 备用Logo --><div style="display: none; text-align: center; font-size: 36px; font-weight: 300; color: #333; padding: 25px 20px; margin: 0 auto 20px auto; max-width: 260px; font-family: 'Cardo', serif; letter-spacing: 1px;" id="fallback-logo">Milano Moda Maison</div>
 		<div class="navigation">
 			<!-- .navList: Shop Categories -->
@@ -353,112 +356,112 @@ document.addEventListener('DOMContentLoaded', function() {
 	<!-- Start of gallery. If you want to manually insert images into the code, this must be done in two places per image. Once within the <img> tag in the <a> with class .bigPic. And a second time in the corresponding <img> tag in the <a> link with class .galleryThumb -->
 	<div class="gallery">
 		<!-- Image placeholders will be replaced with actual product images -->
-		<label for="big-pic-1" class="galleryThumb control-item controls"> <img src="https://placehold.it/800" /> </label>
+		<label for="big-pic-1" class="galleryThumb control-item controls"> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" /> </label>
 		<input checked type="radio" class="hidden-pic-input" id="big-pic-1" name="gallery-radio-buttons" />
 		<!-- Image placeholders will be replaced with actual product images -->
-		<label for="big-pic-2" class="galleryThumb control-item controls"> <img src="https://placehold.it/800" /> </label>
+		<label for="big-pic-2" class="galleryThumb control-item controls"> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" /> </label>
 		<input type="radio" class="hidden-pic-input" id="big-pic-2" name="gallery-radio-buttons" />
 		<!-- Image placeholders will be replaced with actual product images -->
-		<label for="big-pic-3" class="galleryThumb control-item controls"> <img src="https://placehold.it/800" /> </label>
+		<label for="big-pic-3" class="galleryThumb control-item controls"> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" /> </label>
 		<input type="radio" class="hidden-pic-input" id="big-pic-3" name="gallery-radio-buttons" />
 		<!-- Image placeholders will be replaced with actual product images -->
-		<label for="big-pic-4" class="galleryThumb control-item controls"> <img src="https://placehold.it/800" /> </label>
+		<label for="big-pic-4" class="galleryThumb control-item controls"> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" /> </label>
 		<input type="radio" class="hidden-pic-input" id="big-pic-4" name="gallery-radio-buttons" />
 		<!-- Image placeholders will be replaced with actual product images -->
-		<label for="big-pic-5" class="galleryThumb control-item controls"> <img src="https://placehold.it/800" /> </label>
+		<label for="big-pic-5" class="galleryThumb control-item controls"> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" /> </label>
 		<input type="radio" class="hidden-pic-input" id="big-pic-5" name="gallery-radio-buttons" />
 		<!-- Image placeholders will be replaced with actual product images -->
-		<label for="big-pic-6" class="galleryThumb control-item controls"> <img src="https://placehold.it/800" /> </label>
+		<label for="big-pic-6" class="galleryThumb control-item controls"> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" /> </label>
 		<input type="radio" class="hidden-pic-input" id="big-pic-6" name="gallery-radio-buttons" />
 		<!-- Image placeholders will be replaced with actual product images -->
-		<label for="big-pic-7" class="galleryThumb control-item controls"> <img src="https://placehold.it/800" /> </label>
+		<label for="big-pic-7" class="galleryThumb control-item controls"> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" /> </label>
 		<input type="radio" class="hidden-pic-input" id="big-pic-7" name="gallery-radio-buttons" />
 		<!-- Image placeholders will be replaced with actual product images -->
-		<label for="big-pic-8" class="galleryThumb control-item controls"> <img src="https://placehold.it/800" /> </label>
+		<label for="big-pic-8" class="galleryThumb control-item controls"> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" /> </label>
 		<input type="radio" class="hidden-pic-input" id="big-pic-8" name="gallery-radio-buttons" />
 		<!-- Image placeholders will be replaced with actual product images -->
-		<label for="big-pic-9" class="galleryThumb control-item controls"> <img src="https://placehold.it/800" /> </label>
+		<label for="big-pic-9" class="galleryThumb control-item controls"> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" /> </label>
 		<input type="radio" class="hidden-pic-input" id="big-pic-9" name="gallery-radio-buttons" />
 		<!-- Image placeholders will be replaced with actual product images -->
-		<label for="big-pic-10" class="galleryThumb control-item controls"> <img src="https://placehold.it/800" /> </label>
+		<label for="big-pic-10" class="galleryThumb control-item controls"> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" /> </label>
 		<input type="radio" class="hidden-pic-input" id="big-pic-10" name="gallery-radio-buttons" />
 		<!-- Image placeholders will be replaced with actual product images -->
-		<label for="big-pic-11" class="galleryThumb control-item controls"> <img src="https://placehold.it/800" /> </label>
+		<label for="big-pic-11" class="galleryThumb control-item controls"> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" /> </label>
 		<input type="radio" class="hidden-pic-input" id="big-pic-11" name="gallery-radio-buttons" />
 		<!-- Image placeholders will be replaced with actual product images -->
-		<label for="big-pic-12" class="galleryThumb control-item controls"> <img src="https://placehold.it/800" /> </label>
+		<label for="big-pic-12" class="galleryThumb control-item controls"> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" /> </label>
 		<input type="radio" class="hidden-pic-input" id="big-pic-12" name="gallery-radio-buttons" />
 		<!-- Image placeholders will be replaced with actual product images -->
-		<a class="bigPic" href="#zoompic-1"> <img src="https://placehold.it/800" /> </a>
+		<a class="bigPic" href="#zoompic-1"> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" /> </a>
 		<!-- Image placeholders will be replaced with actual product images -->
-		<a class="bigPic" href="#zoompic-2"> <img src="https://placehold.it/800" /> </a>
+		<a class="bigPic" href="#zoompic-2"> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" /> </a>
 		<!-- Image placeholders will be replaced with actual product images -->
-		<a class="bigPic" href="#zoompic-3"> <img src="https://placehold.it/800" /> </a>
+		<a class="bigPic" href="#zoompic-3"> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" /> </a>
 		<!-- Image placeholders will be replaced with actual product images -->
-		<a class="bigPic" href="#zoompic-4"> <img src="https://placehold.it/800" /> </a>
+		<a class="bigPic" href="#zoompic-4"> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" /> </a>
 		<!-- Image placeholders will be replaced with actual product images -->
-		<a class="bigPic" href="#zoompic-5"> <img src="https://placehold.it/800" /> </a>
+		<a class="bigPic" href="#zoompic-5"> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" /> </a>
 		<!-- Image placeholders will be replaced with actual product images -->
-		<a class="bigPic" href="#zoompic-6"> <img src="https://placehold.it/800" /> </a>
+		<a class="bigPic" href="#zoompic-6"> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" /> </a>
 		<!-- Image placeholders will be replaced with actual product images -->
-		<a class="bigPic" href="#zoompic-7"> <img src="https://placehold.it/800" /> </a>
+		<a class="bigPic" href="#zoompic-7"> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" /> </a>
 		<!-- Image placeholders will be replaced with actual product images -->
-		<a class="bigPic" href="#zoompic-8"> <img src="https://placehold.it/800" /> </a>
+		<a class="bigPic" href="#zoompic-8"> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" /> </a>
 		<!-- Image placeholders will be replaced with actual product images -->
-		<a class="bigPic" href="#zoompic-9"> <img src="https://placehold.it/800" /> </a>
+		<a class="bigPic" href="#zoompic-9"> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" /> </a>
 		<!-- Image placeholders will be replaced with actual product images -->
-		<a class="bigPic" href="#zoompic-10"> <img src="https://placehold.it/800" /> </a>
+		<a class="bigPic" href="#zoompic-10"> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" /> </a>
 		<!-- Image placeholders will be replaced with actual product images -->
-		<a class="bigPic" href="#zoompic-11"> <img src="https://placehold.it/800" /> </a>
+		<a class="bigPic" href="#zoompic-11"> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" /> </a>
 		<!-- Image placeholders will be replaced with actual product images -->
-		<a class="bigPic" href="#zoompic-12"> <img src="https://placehold.it/800" /> </a>
+		<a class="bigPic" href="#zoompic-12"> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" /> </a>
 		<!-- Zoom Image 1 -->
 		<div id="zoompic-1" class="overlay">
-			<div class="zoom-bigPic"><a href="#item-1" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="https://placehold.it/800" style="display: inline;"><a href="#item-1" class="close-text">Close zoom view</a></div>
+			<div class="zoom-bigPic"><a href="#item-1" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" style="display: inline;"><a href="#item-1" class="close-text">Close zoom view</a></div>
 		</div>
 		<!-- Zoom Image 2 -->
 		<div id="zoompic-2" class="overlay">
-			<div class="zoom-bigPic"><a href="#item-2" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="https://placehold.it/800" style="display: inline;"><a href="#item-2" class="close-text">Close zoom view</a></div>
+			<div class="zoom-bigPic"><a href="#item-2" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" style="display: inline;"><a href="#item-2" class="close-text">Close zoom view</a></div>
 		</div>
 		<!-- Zoom Image 3 -->
 		<div id="zoompic-3" class="overlay">
-			<div class="zoom-bigPic"><a href="#item-3" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="https://placehold.it/800" style="display: inline;"><a href="#item-3" class="close-text">Close zoom view</a></div>
+			<div class="zoom-bigPic"><a href="#item-3" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" style="display: inline;"><a href="#item-3" class="close-text">Close zoom view</a></div>
 		</div>
 		<!-- Zoombild 4 -->
 		<div id="zoompic-4" class="overlay">
-			<div class="zoom-bigPic"><a href="#item-4" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="https://placehold.it/800" style="display: inline;"><a href="#item-4" class="close-text">Close zoom view</a></div>
+			<div class="zoom-bigPic"><a href="#item-4" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" style="display: inline;"><a href="#item-4" class="close-text">Close zoom view</a></div>
 		</div>
 		<!-- Zoombild 5 -->
 		<div id="zoompic-5" class="overlay">
-			<div class="zoom-bigPic"><a href="#item-5" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="https://placehold.it/800" style="display: inline;"><a href="#item-5" class="close-text">Close zoom view</a></div>
+			<div class="zoom-bigPic"><a href="#item-5" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" style="display: inline;"><a href="#item-5" class="close-text">Close zoom view</a></div>
 		</div>
 		<!-- Zoombild 6 -->
 		<div id="zoompic-6" class="overlay">
-			<div class="zoom-bigPic"><a href="#item-6" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="https://placehold.it/800" style="display: inline;"><a href="#item-6" class="close-text">Close zoom view</a></div>
+			<div class="zoom-bigPic"><a href="#item-6" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" style="display: inline;"><a href="#item-6" class="close-text">Close zoom view</a></div>
 		</div>
 		<!-- Zoombild 7 -->
 		<div id="zoompic-7" class="overlay">
-			<div class="zoom-bigPic"><a href="#item-7" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="https://placehold.it/800" style="display: inline;"><a href="#item-7" class="close-text">Close zoom view</a></div>
+			<div class="zoom-bigPic"><a href="#item-7" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" style="display: inline;"><a href="#item-7" class="close-text">Close zoom view</a></div>
 		</div>
 		<!-- Zoombild 8 -->
 		<div id="zoompic-8" class="overlay">
-			<div class="zoom-bigPic"><a href="#item-8" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="https://placehold.it/800" style="display: inline;"><a href="#item-8" class="close-text">Close zoom view</a></div>
+			<div class="zoom-bigPic"><a href="#item-8" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" style="display: inline;"><a href="#item-8" class="close-text">Close zoom view</a></div>
 		</div>
 		<!-- Zoombild 9 -->
 		<div id="zoompic-9" class="overlay">
-			<div class="zoom-bigPic"><a href="#item-9" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="https://placehold.it/800" style="display: inline;"><a href="#item-9" class="close-text">Close zoom view</a></div>
+			<div class="zoom-bigPic"><a href="#item-9" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" style="display: inline;"><a href="#item-9" class="close-text">Close zoom view</a></div>
 		</div>
 		<!-- Zoombild 10 -->
 		<div id="zoompic-10" class="overlay">
-			<div class="zoom-bigPic"><a href="#item-10" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="https://placehold.it/800" style="display: inline;"><a href="#item-10" class="close-text">Close zoom view</a></div>
+			<div class="zoom-bigPic"><a href="#item-10" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" style="display: inline;"><a href="#item-10" class="close-text">Close zoom view</a></div>
 		</div>
 		<!-- Zoombild 11 -->
 		<div id="zoompic-11" class="overlay">
-			<div class="zoom-bigPic"><a href="#item-11" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="https://placehold.it/800" style="display: inline;"><a href="#item-11" class="close-text">Close zoom view</a></div>
+			<div class="zoom-bigPic"><a href="#item-11" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" style="display: inline;"><a href="#item-11" class="close-text">Close zoom view</a></div>
 		</div>
 		<!-- Zoombild 12 -->
 		<div id="zoompic-12" class="overlay">
-			<div class="zoom-bigPic"><a href="#item-12" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="https://placehold.it/800" style="display: inline;"><a href="#item-12" class="close-text">Close zoom view</a></div>
+			<div class="zoom-bigPic"><a href="#item-12" class="ui-close-link"><i class="fa fa-close"></i></a> <img src="https://via.placeholder.com/800x800/f0f0f0/999999?text=Product+Image" style="display: inline;"><a href="#item-12" class="close-text">Close zoom view</a></div>
 		</div>
 	</div>
 	<div class="upperBody">
