@@ -231,6 +231,13 @@
     max-width: 260px !important;
     max-height: 120px !important;
     visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 999 !important;
+    position: relative !important;
+    background: white !important;
+    border: 2px solid red !important;
+    min-height: 80px !important;
+    width: auto !important;
 }
 
 .navigation {
@@ -272,7 +279,51 @@
 .navList li a:hover {
     color: #BF392B !important;
 }
+
+/* Logo调试和备用方案 */
+.header {
+    min-height: 120px !important;
+    position: relative !important;
+}
+
+#fallback-logo {
+    display: none !important;
+}
 </style>
+
+<script>
+// Logo加载检测和备用方案
+document.addEventListener('DOMContentLoaded', function() {
+    const logoImg = document.querySelector('.header img');
+    const fallbackLogo = document.getElementById('fallback-logo');
+    
+    if (logoImg) {
+        // 检测图片是否加载成功
+        logoImg.onload = function() {
+            console.log('Logo loaded successfully');
+        };
+        
+        logoImg.onerror = function() {
+            console.log('Logo failed to load, showing fallback');
+            if (fallbackLogo) {
+                logoImg.style.display = 'none';
+                fallbackLogo.style.display = 'block';
+            }
+        };
+        
+        // 检查图片是否已经加载完成
+        if (logoImg.complete) {
+            if (logoImg.naturalWidth === 0) {
+                // 图片加载失败
+                logoImg.style.display = 'none';
+                if (fallbackLogo) {
+                    fallbackLogo.style.display = 'block';
+                }
+            }
+        }
+    }
+});
+</script>
 <!--------------------------------------------------->
 <!-- The HTML part of Minimalist starts here --->
 <!--------------------------------------------------->
@@ -281,7 +332,9 @@
 <div id="wrapper">
 	<!-- .header: Logo and top-arranged shop features -->
 	<div class="header">
-		<!-- Logo image source --><img src="https://trivesa.github.io/ebay-fonts-cdn/logo.png">
+		<!-- Logo image source -->
+		<img src="https://i.imgur.com/YourLogoHere.png" alt="Milano Moda Maison" style="display: block !important; margin: 0 auto 20px auto !important; max-width: 260px !important; max-height: 120px !important; visibility: visible !important;" onerror="document.getElementById('fallback-logo').style.display='block'; this.style.display='none';">
+		<!-- 备用Logo --><div style="display: none; text-align: center; font-size: 32px; font-weight: bold; color: #333; padding: 30px 20px; border: 2px solid #BF392B; margin: 0 auto 20px auto; max-width: 260px; background: #f9f9f9;" id="fallback-logo">Milano Moda Maison</div>
 		<div class="navigation">
 			<!-- .navList: Shop Categories -->
 			<ul class="navList">
