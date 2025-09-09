@@ -171,6 +171,59 @@
 <meta name="viewport" content="width=device-width">
 <!-- INSERT THE LINK TO YOUR EXTERNAL CSS BELOW -->
 <link href="https://trivesa.github.io/ebay-fonts-cdn/minimalist_style.css" rel="stylesheet" type="text/css">
+<!-- 临时页脚布局修复 -->
+<style>
+.footerContainer {
+    margin: 0 !important;
+    padding: 40px 60px !important;
+    background-color: #252525 !important;
+    font-family: 'Lato' !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 30px !important;
+    overflow: visible !important;
+}
+
+.footerContainer h2 {
+    margin: 0 0 20px 0 !important;
+    color: #f0f0f0 !important;
+    text-transform: uppercase !important;
+    font-weight: 400 !important;
+    font-size: 17px !important;
+    font-family: 'montserrat' !important;
+    white-space: nowrap !important;
+    line-height: 1.2 !important;
+}
+
+.footerColumn {
+    flex: 1 !important;
+    max-width: 300px !important;
+    min-width: 250px !important;
+    float: none !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    width: auto !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .footerContainer {
+        flex-direction: column !important;
+        padding: 40px 20px !important;
+        gap: 40px !important;
+    }
+    
+    .footerColumn {
+        max-width: none !important;
+        min-width: auto !important;
+        text-align: center !important;
+    }
+    
+    .footerContainer h2 {
+        white-space: normal !important;
+    }
+}
+</style>
 <!--------------------------------------------------->
 <!-- The HTML part of Minimalist starts here --->
 <!--------------------------------------------------->

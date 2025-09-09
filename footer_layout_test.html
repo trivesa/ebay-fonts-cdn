@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Layout Test</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+        
+        .test-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .test-header {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        /* 复制我们修改的页脚样式 */
+        .footerContainer {
+            margin: 0;
+            padding: 40px 60px;
+            background-color: #252525;
+            font-family: 'Lato';
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 30px;
+        }
+
+        .footerContainer h2 {
+            margin: 0 0 20px 0;
+            color: #f0f0f0;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 17px;
+            font-family: 'montserrat';
+            white-space: nowrap;
+            line-height: 1.2;
+        }
+
+        .footerColumn {
+            flex: 1;
+            max-width: 300px;
+            min-width: 250px;
+        }
+
+        .footerColumn p {
+            margin: 0 0 0 0;
+            margin-bottom: 0;
+            padding: 0;
+            color: #D6D6D6;
+            font-size: 15px;
+            line-height: 1.35;
+        }
+
+        .footerColumn a,
+        .footerColumn span {
+            color: #BF392B;
+            font-weight: 300;
+            text-decoration: none;
+        }
+
+        .footerColumn a:hover {
+            text-decoration: underline;
+        }
+
+        .footerRow:first-of-type {
+            padding-top: 5px;
+        }
+
+        .footerRow {
+            margin-bottom: 12px;
+        }
+
+        .footerRow i {
+            float: left;
+            color: #d6d6d6;
+            font-size: 20px;
+            width: 30px;
+            margin-top: 2px;
+        }
+
+        .footerRow p {
+            margin-left: 30px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        #copyright {
+            margin-top: 30px;
+            color: #999;
+            font-size: 12px;
+        }
+        
+        /* 响应式 */
+        @media only screen and (max-width: 768px) {
+            .footerContainer {
+                flex-direction: column;
+                padding: 40px 20px;
+                gap: 40px;
+            }
+            
+            .footerColumn {
+                max-width: none;
+                min-width: auto;
+                text-align: center;
+            }
+            
+            .footerContainer h2 {
+                white-space: normal;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="test-container">
+        <div class="test-header">
+            <h1>🎯 页脚布局测试</h1>
+            <p>测试标题不换行 + 三列均匀分布</p>
+        </div>
+        
+        <!-- 复制我们的页脚HTML -->
+        <div class="footerContainer">
+            <div class="footerColumn">
+                <h2>About Milano Moda Maison</h2>
+                <p><a href="#" target="_blank">Milano Moda Maison</a> is your trusted source for <b>Authentic Luxury Fashion</b></p>
+                <br />
+                <p>Specializing in unique designer pieces, vintage treasures, and exclusive items from the world's finest fashion houses.</p>
+                <br />
+                <p>Contact us anytime via <a href="#" target="_blank">eBay Messages</a>.</p>
+            </div>
+            <div class="footerColumn">
+                <h2>Authenticity & Quality</h2>
+                <div class="footerRow"><i class="fa fa-certificate"></i>
+                    <p>100% Authentic Guarantee</p>
+                </div>
+                <div class="footerRow"><i class="fa fa-shield"></i>
+                    <p>Professional Authentication</p>
+                </div>
+                <div class="footerRow"><i class="fa fa-star"></i>
+                    <p>Curated Selection</p>
+                </div>
+                <div class="footerRow"><i class="fa fa-gem"></i>
+                    <p>Luxury Expertise Since 2020</p>
+                </div>
+            </div>
+            <div class="footerColumn">
+                <h2>Customer Care</h2>
+                <p>Discover more exclusive pieces in our <a href="#" target="_blank">eBay Store</a> and follow us for the latest luxury finds.</p>
+                <br />
+                <div class="footerRow"><i class="fa fa-heart"></i>
+                    <p>Customer Satisfaction Priority</p>
+                </div>
+                <div class="footerRow"><i class="fa fa-refresh"></i>
+                    <p>Hassle-Free Returns</p>
+                </div>
+                <div id="copyright">Luxury Fashion Curation by <a href="#" target="_blank">Milano Moda Maison</a></div>
+            </div>
+        </div>
+        
+        <div style="padding: 20px; background: #f8f9fa; text-align: center;">
+            <h3>✅ 布局检查清单</h3>
+            <p><strong>标题检查:</strong> "About Milano Moda Maison" 应该在一行显示</p>
+            <p><strong>分布检查:</strong> 三列应该均匀分布，不偏左</p>
+            <p><strong>间距检查:</strong> 列之间有合适的间距</p>
+        </div>
+    </div>
+</body>
+</html>
