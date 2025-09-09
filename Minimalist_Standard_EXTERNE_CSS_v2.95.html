@@ -224,14 +224,21 @@
     }
 }
 
-/* Logo和导航样式 */
-.header img {
+/* Logo和导航样式 - 只影响header中的logo */
+.header > img {
     display: block !important;
     margin: 0 auto 40px auto !important;
     max-width: 525px !important;
     max-height: 240px !important;
     visibility: visible !important;
     width: auto !important;
+}
+
+/* 确保其他图片不受影响 */
+.gallery img, .bigPic img, .galleryThumb img, .zoom-bigPic img {
+    max-width: none !important;
+    max-height: none !important;
+    margin: initial !important;
 }
 
 .navigation {
