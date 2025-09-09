@@ -224,20 +224,13 @@
     }
 }
 
-/* 立即修复导航和Logo问题 */
+/* Logo和导航样式 */
 .header img {
     display: block !important;
     margin: 0 auto 20px auto !important;
     max-width: 260px !important;
     max-height: 120px !important;
     visibility: visible !important;
-    opacity: 1 !important;
-    z-index: 999 !important;
-    position: relative !important;
-    background: white !important;
-    border: 2px solid red !important;
-    min-height: 80px !important;
-    width: auto !important;
 }
 
 .navigation {
@@ -334,7 +327,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	<div class="header">
 		<!-- Logo image source -->
 		<img src="https://i.imgur.com/YourLogoHere.png" alt="Milano Moda Maison" style="display: block !important; margin: 0 auto 20px auto !important; max-width: 260px !important; max-height: 120px !important; visibility: visible !important;" onerror="document.getElementById('fallback-logo').style.display='block'; this.style.display='none';">
-		<!-- 备用Logo --><div style="display: none; text-align: center; font-size: 32px; font-weight: bold; color: #333; padding: 30px 20px; border: 2px solid #BF392B; margin: 0 auto 20px auto; max-width: 260px; background: #f9f9f9;" id="fallback-logo">Milano Moda Maison</div>
+		<!-- 备用Logo --><div style="display: block; text-align: center; font-size: 36px; font-weight: 300; color: #333; padding: 25px 20px; margin: 0 auto 20px auto; max-width: 260px; font-family: 'Cardo', serif; letter-spacing: 1px;" id="fallback-logo">Milano Moda Maison</div>
 		<div class="navigation">
 			<!-- .navList: Shop Categories -->
 			<ul class="navList">
