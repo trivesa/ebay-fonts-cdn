@@ -234,14 +234,33 @@
     width: auto !important;
 }
 
-/* 确保其他图片不受影响 */
-.gallery img, .bigPic img, .galleryThumb img, .zoom-bigPic img, 
-img:not(.main-logo) {
-    max-width: initial !important;
-    max-height: initial !important;
-    margin: initial !important;
-    width: initial !important;
-    height: initial !important;
+/* 强制重置所有非Logo图片 */
+.gallery img, .bigPic img, .galleryThumb img, .zoom-bigPic img {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    display: block !important;
+}
+
+/* 彻底阻止其他图片被Logo样式影响 */
+img:not(.main-logo):not([alt="Milano Moda Maison"]) {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+}
+
+/* 特别针对占位符图片 */
+img[src*="placeholder"], img[src*="placehold"] {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    display: block !important;
 }
 
 .navigation {
